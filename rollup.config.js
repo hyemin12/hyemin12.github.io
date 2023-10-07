@@ -4,7 +4,7 @@ import license from 'rollup-plugin-license';
 import path from 'path';
 
 const JS_SRC = '_javascript';
-const JS_DIST = '_javascript';
+const JS_DIST = '';
 const isProd = process.env.NODE_ENV === 'production';
 
 function build(filename) {
