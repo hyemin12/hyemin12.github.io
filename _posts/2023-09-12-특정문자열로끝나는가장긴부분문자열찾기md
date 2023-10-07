@@ -1,0 +1,27 @@
+---
+title: 특정 문자열로 끝나는 가장 긴 부분 문자열 찾기
+date: 2023-09-12 18:24:00
+categories: ["프로그래머스", "기초트레이닝"]
+tags: ["programmers"]
+---
+
+[https://school.programmers.co.kr/learn/courses/30/lessons/181872](https://school.programmers.co.kr/learn/courses/30/lessons/181872)
+
+## 📔 문제 설명
+
+문자열 myString과 pat가 주어집니다. myString의 부분 문자열중 pat로 끝나는 가장 긴 부분 문자열을 찾아서 return 하는 solution 함수를 완성해 주세요.
+
+💡 입출력 예
+
+| myString   | pat  | result     |
+| ---------- | ---- | ---------- |
+| "AbCdEFG"  | "dE" | "AbCdE"    |
+| "AAAAaaaa" | "a"  | "AAAAaaaa" |
+
+## 💻내가 작성한 코드
+
+```js
+function solution(myString, pat) {
+  return myString.slice(0, myString.lastIndexOf(pat)) + pat;
+}
+```
