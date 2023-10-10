@@ -1,6 +1,6 @@
 ---
 title: map(), forEach() 차이
-date: 2023-09-12 18:24:00
+date: 2023-09-12 18:24:00 +09:00
 categories: ["javascript", ""]
 tags: ["javascript"]
 ---
