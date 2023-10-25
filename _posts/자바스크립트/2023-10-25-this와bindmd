@@ -1,0 +1,195 @@
+---
+title: this와 bind
+date: 2023-10-25 12:24:00 +09:00
+categories: ["javascript", ""]
+tags: []
+---
+
+## this
+
+- 객체를 가르키는 키워드
+- 상황에 따라 달라짐
+
+### <span style="color:#f00;">"this는 함수를 호출한 객체이다."<span>
+
+### ■ 전역적인 문맥 (함수 외부)
+
+전역적인 문맥에서 this에 접근하면 this는 window가 됨  
+엄격모드와는 상관없이 this는 window가 된다!
+
+```js
+console.log(this); // window {...}
+```
+
+```js
+"use strict"; // 자바스크립트 문법을 엄격하게 검사해달라는 뜻
+
+console.log(this); // window {...}
+```
+
+#### 함수 안에서 this를 호출한다면?
+
+- main()함수는 window 객체 안에 등록이 되기 때문에 window를 생략하고 함수를 호출해도 this는 window가 됨
+- `main() = window.main()`
+
+```js
+function main() {
+  console.log(this); // window {...}
+}
+
+main();
+// = window.main()
+```
+
+#### 엄격모드에서의 this는?
+
+`main()`함수만 호출할 경우에는 main()함수를 호출한 객체가 생략되어있기때문에 undefined가 출력됨
+
+```js
+"use strict";
+function main() {
+  console.log(this); // undefined
+}
+
+main();
+```
+
+this값을 window로 만들어 주고 싶다면, window에서 main()함수를 호출한다고 명확하게 작성해주면 됨
+
+```js
+"use strict";
+function main() {
+  console.log(this); // window {...}
+}
+
+window.main();
+```
+
+### ■ 객체 메서드에서의 this
+
+- this는 우리가 만든 오브젝트가 됨
+- Object라는 객체가 main 함수를 호출했기 때문에 this는 object가 됨
+- this는 함수가 정의된 위치나 방법에 영향을 받지 않음
+
+```js
+const object = {
+  name: "혜민",
+  main: function () {
+    console.log(this); // { name: '혜민', main: f }
+    console.log(this.name); // '혜민'
+  }
+};
+
+obejct.main();
+```
+
+@예시 - 함수가 정의된 위치나 방법에 영향을 받지 않음  
+함수를 별도로 만들고, 객체의 구성원으로 포함시켜도 this는 object 객체가 됨
+
+```js
+function main() {
+  console.log(this); // { name: '혜민', main: f }
+  console.log(this.name); // '혜민'
+}
+const object = {
+  name: "혜민",
+  main
+};
+
+obejct.main();
+```
+
+```js
+function main() {
+  console.log(this); // { name: '혜민', main: f }
+  console.log(this.name); // '혜민'
+}
+
+const object = {
+  name: "혜민"
+};
+
+object.main = main;
+
+obejct.main();
+```
+
+## Bind()
+
+- this를 원하는 객체로 고정시킬 때 사용
+- `bind()`는 객체가 담겨있는 새로운 함수를 반환함
+- 이미 bind되어 있는걸 다시 한번 bind 할 수 없음
+
+@예시
+
+bind를 하지않았을 때의 this는 window를 가르키지만, main을 bind 한다면 더 이상 window가 아니라 bind된 객체를 가르킴
+
+```js
+function main() {
+  console.log(this); // window
+}
+```
+
+```js
+function main() {
+  console.log(this); // { name: "혜민" }
+}
+
+const mainBind = main.bind({ name: "혜민" });
+
+mainBind();
+```
+
+```js
+const object = {
+  name: "혜민",
+  main: function () {
+    console.log(this); // { name: "멋진객체" }
+  }.bind({ name: "멋진객체" })
+};
+
+object.main();
+```
+
+@예시 - 이미 bind되어 있는걸 다시 한번 bind 할 수 없음
+
+main 함수를 bind한 mainBind를 다시 한번 bind 하더라도 제일 처음 bind했던 값이 출력됨
+
+```js
+function main() {
+  console.log(this); // { name: "혜민" }
+}
+
+const mainBind = main.bind({ name: "혜민" });
+const mainBindBind = main.bind({});
+
+mainBindBind();
+```
+
+### ■ 이벤트 처리기로 사용할 때의 this
+
+this = 이벤트를 발사한 요소
+
+@예시
+
+button을 클릭하면 실행되는 이벤트에서의 this는 이벤트가 실행되는 요소 그 자체가 됨
+
+```html
+<body>
+  <button id="btn">버튼</button>
+</body>
+```
+
+```js
+const button = document.getElementId("btn");
+
+button.addEventListener("click", function () {
+  console.log(this); // <button id="btn">버튼</button>
+});
+```
+
+---
+
+영상
+
+[별코딩\_자바스크립트 - This와 Bind | 멋진 개발자라면 꼭 알아야됨!!](https://www.youtube.com/watch?v=j6VkGimAs-E)
