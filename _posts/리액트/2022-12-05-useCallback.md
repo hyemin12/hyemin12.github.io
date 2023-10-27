@@ -1,7 +1,7 @@
 ---
 title: useCallback()
 date: 2022-10-05 18:24:00 +09:00
-categories: ["리액트", "기타"]
+categories: ["리액트", "리액트"]
 tags: ["최적화"]
 ---
 
