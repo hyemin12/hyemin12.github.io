@@ -1,7 +1,7 @@
 ---
 title: var, let, const
 date: 2023-10-25 12:24:00 +09:00
-categories: ["javascript", "javascript"]
+categories: ["javascript", "자바스크립트"]
 tags: []
 ---
 
