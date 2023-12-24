@@ -3,6 +3,8 @@ title: Already-included-file-name-오류
 date: 2023-09-21 18:24:00 +09:00
 categories: ["오류해결하기"]
 tags: ["오류", "클론유튜브"]
+toc: true
+toc_sticky: true
 ---
 
 자바스크립트로 제작했던 포케몬 앱을 타입스크립트로 바꾸는 작업 중에 발생한 오류

@@ -3,6 +3,8 @@ title: var, let, const
 date: 2023-10-25 12:24:00 +09:00
 categories: ["javascript", "자바스크립트"]
 tags: []
+toc: true
+toc_sticky: true
 ---
 
 ## var와 let의 차이

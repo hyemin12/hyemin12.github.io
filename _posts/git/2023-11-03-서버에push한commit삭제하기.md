@@ -3,6 +3,8 @@ title: 서버에 push한 commit 삭제하기
 date: 2023-11-03 13:24:00 +09:00
 categories: ["git"]
 tags: ["git"]
+toc: true
+toc_sticky: true
 ---
 
 ## #서버에 push한 commit 삭제하기

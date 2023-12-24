@@ -2,7 +2,9 @@
 title: animation-timeline
 date: 2022-10-23 14:24:00 +09:00
 categories: ["html/css", "css"]
-tags: ["grid"]
+tags: []
+toc: true
+toc_sticky: true
 ---
 
 ### animation-timeline()

@@ -3,6 +3,8 @@ title: 타입스크립트 - interface
 date: 2022-05-10 18:24:00 +09:00
 categories: ["javascript", "타입스크립트"]
 tags: ["타입스크립트"]
+toc: true
+toc_sticky: true
 ---
 
 ### @interface

@@ -3,6 +3,8 @@ title: tailwind css prettier
 date: 2023-12-06 18:24:00
 categories: ["html/css", "css"]
 tags: []
+toc: true
+toc_sticky: true
 ---
 
 ## tailwind css

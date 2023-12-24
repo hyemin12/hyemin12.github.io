@@ -3,6 +3,8 @@ title: zustand middleware persis type 오류
 date: 2023-12-12 18:24:00 +09:00
 categories: ["오류해결하기"]
 tags: ["오류"]
+toc: true
+toc_sticky: true
 ---
 
 ```

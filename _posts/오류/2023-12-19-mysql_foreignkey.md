@@ -3,6 +3,8 @@ title: my sql foreign key 오류
 date: 2023-12-19 18:24:00 +09:00
 categories: ["오류해결하기"]
 tags: ["오류"]
+toc: true
+toc_sticky: true
 ---
 
 ### 외래키 등록을 위해 CLI로 명령어을 입력했을 때 발생한 오류

@@ -3,6 +3,8 @@ title: Express post할 때 body 값 가져오지 못하는 오류
 date: 2023-12-13 18:24:00 +09:00
 categories: ["오류해결하기"]
 tags: ["오류"]
+toc: true
+toc_sticky: true
 ---
 
 ### json parse를 위해 `app.use(express.json())`을 입력했는데도, body 값을 받아오지 못하는 오류

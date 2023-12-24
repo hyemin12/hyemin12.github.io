@@ -3,6 +3,8 @@ title: map(), forEach() 차이
 date: 2023-09-12 18:24:00 +09:00
 categories: ["javascript", "자바스크립트"]
 tags: ["javascript"]
+toc: true
+toc_sticky: true
 ---
 
 - map() 과 forEach()는 모두 반복문을 사용할 때 많이 사용되는 메소드이다.
