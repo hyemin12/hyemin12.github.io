@@ -1,6 +1,5 @@
 ---
-title: "Another git process seems to be running in this repository, e.g.
-an editor opened by 'git commit'."
+title: git pull origin 명령어 오류
 date: 2022-11-07 18:24:00 +09:00
 categories: ["오류해결하기"]
 tags: ["오류"]

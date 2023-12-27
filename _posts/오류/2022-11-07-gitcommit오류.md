@@ -15,11 +15,11 @@ may have crashed in this repository earlier:
 remove the file manually to continue.
 ```
 
-### 문제:
+### 문제
 
 파일을 수정하고 덮어 쓴 파일에 오류가 생김
 
-### 해결방법:
+### 해결방법
 
 `.git/index.lock` 파일을 삭제하면 됨
 
