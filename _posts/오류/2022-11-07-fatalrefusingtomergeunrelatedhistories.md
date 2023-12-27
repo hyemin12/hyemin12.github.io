@@ -18,13 +18,13 @@ hint: 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
-### 문제:
+### 문제
 
 프로젝트 구조를 변경하고, `git push origin master`를 통해 업로드 하려고 하였으나 `git pull`을 통해 프로젝트를 병합하라는 오류가 발생
 
 오류 메세지를 따라 `git pull origin master`를 입력하였으나 해당 오류 발생
 
-### 해결방법:
+### 해결방법
 
 ```sh
 git pull origin 브런치명 --allow-unrelated-histories

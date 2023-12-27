@@ -11,15 +11,15 @@ toc_sticky: true
 export 'useHistory' (imported as 'useHistory') was not found in 'react-router-dom'
 ```
 
-### 문제:
+### 문제
 
 프로젝트 만드는 과정에서 history hook을 사용하려고 했더니, 오류가 발생
 
-### 이유:
+### 이유
 
 버전에 따라 명령어가 변경됨
 
-### 해결방법:
+### 해결방법
 
 1. 6버전 미만 버전으로 다운그레이드하기
 2. useNavigate 대체하기

@@ -20,10 +20,10 @@ npm ERR! A complete log of this run can be found in:
 npm ERR!     C:\Users\user\AppData\Local\npm-cache\_logs\2022-02-13T13_03_01_683Z-debug-0.log
 ```
 
-### 문제:
+### 문제
 
 경로가 잘못 됨
 
-### 해결방법:
+### 해결방법
 
 프로젝트 폴더로 이동하여 명령어를 재 실행하니 정상작동 함
