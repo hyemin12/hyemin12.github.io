@@ -77,8 +77,9 @@ html {
       }
 
       pre {
+        // text-wrap: wrap;
         overflow: visible; /* Fixed iOS safari overflow-x */
-        word-break: normal; /* Fixed iOS safari linenos code break */
+        word-break: break-all; /* Fixed iOS safari linenos code break */
       }
     }
   }
