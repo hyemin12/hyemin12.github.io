@@ -7,12 +7,12 @@ toc: true
 toc_sticky: true
 ---
 
-### 📘React에서의 render와 paint
+## ✨React에서의 render와 paint
 
 - render : DOM을 구성하기 위해 각 엘리먼트의 속성을 계산하는 과정
 - paint: 실제 스크린에 Layout을 표시하고 업데이트하는 과정
 
-## useEffect
+## ✨useEffect
 
 [React 공식문서 - useEffect](https://ko.react.dev/reference/react/useEffect)
 
@@ -23,7 +23,7 @@ toc_sticky: true
 #### component → Render → Paint → useEffect
 
 useEffect는 컴포넌트들이 render와 paint된 후에 실행된다. **비동기적**으로 DOM이 그려지고난 후에 **상태 값에 따라 다시 렌더링**된다.  
-따라서 useEffect 내부에 DOM에 영향을 주는 코드가 있다면 화면이 깜빡이게 된다.
+따라서 useEffect 내부에 **DOM에 영향**을 주는 코드가 있다면 **화면이 깜빡이게 된다**.
 
 ### 📘문법
 
@@ -111,7 +111,7 @@ function Timer() {
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
-## useLayoutEffect
+## ✨useLayoutEffect
 
 [React 공식문서 - useLayoutEffect](https://ko.react.dev/reference/react/useLayoutEffect)
 
@@ -122,7 +122,7 @@ function Timer() {
 #### component → Render → useLayoutEffect → Paint
 
 useEffect와 동일하지만, 실행시점이 다르다. useLayoutEffect는 **렌더링된 후 paint 전에 동기적**으로 실행된다.  
-즉, 브라우저가 화면을 다시 그리기 전에 실행되기때문에 DOM을 조작하는 코드가 존재하더라도 사용자는 깜빡임을 보지 않는다.
+즉, 브라우저가 화면을 다시 그리기 전에 실행되기때문에 DOM을 조작하는 코드가 존재하더라도 **사용자는 깜빡임을 보지 않는다**.
 
 애니메이션 구현같이 반응이 바로 나타나야하는 경우에 사용하는 것이 좋다.
 
@@ -135,7 +135,7 @@ useLayoutEffect(() => {
 }, [dependancy array]);
 ```
 
-### 📘useLayoutEffect 예1
+### 📘useLayoutEffect 예
 
 윈도우 리사이즈 감지
 
