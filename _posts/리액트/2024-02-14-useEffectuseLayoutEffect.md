@@ -18,7 +18,7 @@ toc_sticky: true
 
 ### 📘useEffect 실행 단계
 
-![useEffect 실행 단계-miro.medium.com](https://miro.medium.com/v2/resize:fit:640/format:webp/1*Q5DfWHYDNQdfnal-IvW05g.png)
+<img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*Q5DfWHYDNQdfnal-IvW05g.png" alt="https://miro.medium.com/v2/resize:fit:640/format:webp/1*Q5DfWHYDNQdfnal-IvW05g.png" />
 
 #### component → Render → Paint → useEffect
 
@@ -117,7 +117,7 @@ function Timer() {
 
 ### 📘useLayoutEffect 실행 단계
 
-![useLayoutEffect 실행 단계-miro.medium.com](https://miro.medium.com/v2/resize:fit:640/format:webp/1*ZmRLve6CMNAuaQ5EFUa-8g.png)
+<img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*ZmRLve6CMNAuaQ5EFUa-8g.png" alt="https://miro.medium.com/v2/resize:fit:640/format:webp/1*ZmRLve6CMNAuaQ5EFUa-8g.png" />
 
 #### component → Render → useLayoutEffect → Paint
 
