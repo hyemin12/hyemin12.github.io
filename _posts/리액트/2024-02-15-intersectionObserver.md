@@ -9,6 +9,62 @@ toc_sticky: true
 
 ## ✨InterSection Observer API
 
+특정 요소가 뷰포트 내에서 얼마나 보이는지를 비동기적으로 감지하는 기능을 수행합니다.
+
+### 📘 사용방법
+
+#### 1. Observer 생성
+
+`new IntersectionObserver`를 사용하여 Observer를 생성하고, 콜백함수와 옵션을 설정
+
+```js
+const observer = new IntersectionObserver();
+```
+
+#### 2. 관찰대상 설정 (target 설정)
+
+observer의 `observer` 메소드를 사용하여 감시할 요소를 지정합니다. 요소가 화면에 나타나거나 사라질 때 콜백함수를 실행
+
+```js
+observer.observe();
+```
+
+#### 3. 콜백함수 정의
+
+target이 화면에 나타나거나 사라질 때 실행시킬 콜백함수를 정의  
+`target`과 `intersectionObserverEntry` 객체의 배열을 인자로 받음
+
+```js
+const observer = new IntersectionObserver(([entry]) => {
+  // 실행 시킬 콜백 함수
+});
+```
+
+#### 4. 가시성 데이터 설정 (옵션 설정)
+
+```js
+const observer = new IntersectionObserver(
+  ([entry]) => {
+    // 실행 시킬 콜백 함수
+  },
+  {
+    // 가시성 데이터 설정
+  }
+);
+```
+
+```js
+{
+  root: 관찰 대상 요소의 부모 요소 지정,
+  rootMargin: 관찰 대상이 뷰포트와 떨어져있는 거리를 지정 (css margin과 유사),
+  threshold: 관찰 대상의 가시성 비율 지정, 0 ~ 1사이의 수로 지정
+}
+```
+
+#### 5. Observer 해제
+
+`disconnect()` 메소드를 사용해서 관찰을 해제
+
 ### 📘 사용 예
 
 해당 엘리먼트가 관찰되면 애니메이션 효과 실행하기
