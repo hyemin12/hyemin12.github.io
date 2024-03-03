@@ -1,6 +1,6 @@
 ---
 title: tanstack Query - useMutation
-date: 2024-03-02 13:24:00 +09:00
+date: 2024-03-03 13:24:00 +09:00
 categories: ["프레임워크", "리액트"]
 tags: []
 toc: true

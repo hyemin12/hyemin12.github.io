@@ -218,6 +218,17 @@ function fetchTodoList({ queryKey }) {
 }
 ```
 
+### 📕 staleTime
+
+- 데이터가 오래된 것으로 간주되는 시간(밀리초)
+- 데이터를 다시 가져올지 판단하는 설정
+
+### 📕 cacheTime
+
+- 데이터를 얼마나 오랫동안 보관할 것인지 설정하는 시간(밀리초)
+- 쿼리가 unmount되면 데이터는 비활성화 상태가 되고, 비활성화 상태가 된 데이터는 `cacheTime`에 설정된 시간이 지난 후에 가비지 컬렉션이 됨
+- 기본값은 5분 `(5 * 60 * 1000)`
+
 참고 사이트
 
 - [[React] TanStack Query v4 (React Query)](https://beomy.github.io/tech/react/tanstack-query-v4/)
