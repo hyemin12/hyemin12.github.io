@@ -1,6 +1,6 @@
 ---
 title: tanstack Query - useInfiniteQuery
-date: 2024-03-02 13:24:00 +09:00
+date: 2024-03-03 13:24:00 +09:00
 categories: ["프레임워크", "리액트"]
 tags: []
 toc: true
@@ -185,4 +185,37 @@ export default PostList;
 {
   isFetching && <div>Loading...</div>;
 }
+```
+
+## 6. useInfiniteQuery에서 data 형식 바꾸기
+
+useInfiniteQuery를 사용하면 data안에 바로 data가 응답되는 것이 아닌 pages 속성 안에 배열 형태로 응답받기 때문에, 별도로 가공을 해줘야한다.
+
+```json
+// data의 형태
+
+{
+  "data": {
+    "pages": [
+      {
+        "content": ""
+      },
+      {
+        "content": ""
+      }
+    ]
+  }
+}
+```
+
+- 변환
+
+```ts
+const computedData = data ? data.pages.flatMap((page) => page.lists) : [];
+```
+
+- 페이지네이션값 변환
+
+```ts
+const pagination = data ? data.pages[data?.pages.length - 1].pagination : {};
 ```
